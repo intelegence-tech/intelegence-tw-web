@@ -1,0 +1,484 @@
+body {
+  /* default font */
+  font-family: Noto Sans CJK TC;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0.08em;
+  text-align: left;
+  margin: 0;
+}
+
+br.break {
+  clear: both;
+}
+div.dev-anchor {
+  display: none;
+  width: 100px;
+  height: 100px;
+  background: rgba(255,0,0,0.5);
+}
+
+div.header {
+  width: 100vw;
+  max-width:100%;
+  height: 75px;
+  background: #005D7B;
+  position: fixed;
+  z-index: 9000;
+}
+
+
+div.header-col1 {
+  width: 270px;
+  height: 75px;
+  float: left;
+  background-image: url(../svg/header-col1.svg);
+  background-size: 270px 75px;
+  background-position: center center;
+}
+
+img.logo {
+  padding-top: 14px;
+  padding-left: 60px;
+}
+
+div.header-col2 {
+  width: calc(100vw - 560px);
+  height: 75px;
+  float: left;
+  text-align: center;
+}
+div.header a.nav {
+  margin:0;
+  font-size: 18px;
+  line-height: 72px;
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-right: 45px;
+}
+div.header-col2 a.nav:last-of-type {
+  margin-right: 0px;
+}
+div.header-col3 {
+  width: 180px;
+  height: 75px;
+  float: right;
+  font-size: 18px;
+  line-height: 72px;
+  color: #FFFFFF;
+  padding-left: 90px;
+}
+div.header-col3 img.icon {
+  vertical-align: text-top;
+}
+
+div.main {
+  width: 100vw;
+  max-width:100%;
+  height: 50vw;
+  background-image: url(../image/main-1.jpg);
+  background-size: cover;
+}
+div.main div.main-title {
+  height: 150px;
+  position: absolute;
+  top: 25%;
+  left: 120px;
+}
+div.main-title img {
+  margin-bottom: 20px; 
+}
+div.main h1 {
+  font-family: Noto Sans CJK TC;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: 0.08em;
+  text-align: left;
+  color: #FFFFFF;
+  margin: 0px;
+}
+div.profession {
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-top: 40vw;
+  background-image: url(../image/deco-top-service.png);
+  background-size: calc(100vw - 60px) 57px;
+  background-position: 0 40vw;
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+}
+div.profession h2 {
+  margin-left: 75px;
+  font-family: Noto Sans CJK TC;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.08em;
+  text-align: left;
+}
+div.profession div.grid {
+  position: relative;
+  z-index: 100;
+  background-color: #00374B; 
+  display: flex;
+  padding-top: 36px;
+  padding-left: 80px;
+  padding-right: 80px;
+  height: 160px;
+  justify-content: space-between;
+}
+div.profession div.grid div.col {
+  max-width: 270px;
+  padding-right: 20px;
+}
+div.profession div.grid div.col img {
+  display: block;
+  float: left;
+  padding-right: 15px;
+  padding-bottom: 40px;
+}
+div.profession span.highlight {
+  font-size: 12px;
+  color: #E0BA8B;
+}
+div.content div.company {
+  margin-top: -30px;
+  background-image: url(../image/bg-1.jpg);
+  background-size: 100% 100%;
+  padding-bottom: 180px;
+}
+div.intro {
+  padding-top: 100px;
+}
+div.section h2 {
+  padding-top: 60px;
+  padding-left: 120px;
+  font-family: Noto Sans CJK TC;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0.08em;
+  text-align: left;
+  color: #00374B;
+}
+div.section h2 img {
+  padding-left: 18px;
+}
+div.text {
+  margin-top: 30px;
+  margin-left: 120px;
+  padding-bottom: 36px;
+  width: calc(100vw - 260px);
+  background: #FFFFFF;
+}
+div.text div.text-header {
+  text-align: right;
+}
+div.text h3 {
+  margin-top: 36px;
+  margin-left: 110px;
+  font-family: Noto Sans CJK TC;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.08em;
+  text-align: left;
+  color: #00374B;
+}
+div.text p {
+  margin: 30px 110px;
+  font-family: Noto Sans CJK TC;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0.08em;
+  text-align: left;
+  color: #00374B;
+  padding-bottom: 36px;
+}
+div.jobs {
+  padding-bottom: 180px;
+}
+div.jobs-cards {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 110px;
+  margin-right: 110px;
+}
+
+div.card {
+  background: #FFFFFF;
+  height: 700px;  
+  width: 390px;
+  margin-right: 30px;
+}
+div.card-header {
+  height: 220px;
+  text-align: center;
+  background: #005D7B;
+  margin: 0;
+}
+div.card-header-title {
+  position: relative;
+  margin: auto;
+  top: calc(50% - 40px);
+  height: 80px;
+  width: 280px;
+  font-family: Noto Sans CJK TC;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  color: #FFFFFF;
+}
+div.card-content {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  padding-top:20px;
+  padding-left:20px;
+  padding-right:20px;
+  padding-bottom: 80px;
+  color: #00374B;
+}
+div.card-content hr {
+  border: 0.5px solid #00374B;
+}
+div.job1 div.card-header {
+  background-image: url(../image/job1.png);
+}
+div.job1 div.card-content {
+  background-image: url(../svg/deco-line1.svg);
+}
+div.job2 div.card-header {
+  background-image: url(../image/job2.png);
+}
+div.job2 div.card-content {
+  background-image: url(../svg/deco-line2.svg);
+}
+div.job3 div.card-header {
+  background-image: url(../image/job3.png);
+}
+div.job3 div.card-content {
+  background-image: url(../svg/deco-line1.svg);
+}
+div.jobs div.info  {
+  width: 591px;
+  height: 326px;
+  float: left;
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  margin-top: 86px;
+  margin-bottom: 20px;
+  box-shadow: 0px -6px 40px rgba(0, 0, 0, 0.2);
+}
+div.jobs div.info h2 {
+  padding: 0;
+  margin-top: 45px;
+  margin-left: 45px;
+  margin-bottom: 30px;
+  font-family: Noto Sans CJK TC;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0.08em;
+  text-align: left;
+  color: #00374B;
+}
+div.jobs div.info h2 img {
+  vertical-align: middle;
+}
+div.jobs div.info ul {
+  margin-left: 30px;
+  font-family: Noto Sans CJK TC;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 0.08em;
+  text-align: left;
+  color: #00374B;
+}
+div.jobs div.why-intelegence {
+  background-image: url(../svg/deco-line3.svg);
+  margin-left: 110px;
+  margin-right: 8px;
+}
+div.jobs div.hr-contact {
+  background-image: url(../svg/deco-line4.svg);
+  margin-left: 8px;
+  margin-right: 110px;
+}
+div.news {
+  background-color: #FFFFFF;
+}
+div.news div.more-news {
+  width: 100%;
+  font-family: Noto Sans CJK TC;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  color: #00374B;
+  margin-bottom: 120px;
+}
+div.contact {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: url(../image/bg-contactus.jpg);
+  background-size: calc(100vw - 220px) 318px;
+  background-color: #FFFFFF;
+  margin-left: 110px;
+  margin-right: 110px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+div.contact div.text-header {
+  text-align: right;
+}
+div.contact h2 {
+  font-family: Noto Sans CJK TC;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0.08em;
+  text-align: left;
+  color: #FFFFFF;
+  margin-left: 90px;
+  margin-top: 90px;
+  margin-bottom: 172px;
+}
+div.contact form {
+  margin-left: 90px;
+  margin-right: 90px;
+  margin-bottom: 36px;
+  font-family: Noto Sans CJK TC;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.08em;
+  text-align: left;
+  color: #00374B;
+}
+div.contact form .space {
+  display: inline-block;
+  margin-left: calc(100% - 680px);
+}
+div.contact form .required:after {
+  color: #E75E5E;
+  margin-left: 8px;
+  font-size: 24px;
+  content: "*"
+}
+div.contact form label {
+  font-family: Noto Sans CJK TC;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-: 0.08em;
+  text-align: left;
+}
+div.contact input {
+  margin-top: 15px;
+  margin-bottom: 36px;
+  background: #F4F4F4;
+  border: 1px solid #D8D8D8;
+  width: 100%;
+  height: 60px;
+}
+div.contact input::placeholder,
+div.contact textarea::placeholder
+ {
+  padding-left: 30px;
+  font-family: Noto Sans CJK TC;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.08em;
+  text-align: left;
+  color: #BBBBBB;
+}
+div.form-input1 {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
+}
+div.form-input2 {
+  margin-top: 36px;
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+}
+div.form-input2 label {
+  padding-top: 20px;
+}
+div.form-input2 textarea {
+  width: 100%;
+  height: 240px;
+  background: #F4F4F4;
+  border: 1px solid #D8D8D8;
+}
+
+div.contact form button {
+  margin-bottom: 36px;
+  width: 100%;
+  height: 60px;
+  font-family: Noto Sans CJK TC;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #005D7B;
+}
+div.footer-top {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: url(../image/deco-footer-top.png);
+  background-size: 100vw 60px;
+  width: 100vw;
+  max-width:100%;
+  height: 60px;
+}
+div.footer{
+  background-color: #00374B;
+  width: 100vw;
+  max-width:100%;
+  height: 180px;
+  color: #FFFFFF;
+}
+div.footer p{
+  margin: 0px;
+}
+div.footer-col1{
+  float: left;
+  margin-top: 45px;
+}
+div.footer-col2{
+  margin-top: 60px;
+  margin-left: 60px;
+  float: left;
+  font-family: IBM Plex Sans;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+div.footer-col3{
+  margin-top: 108px;
+  margin-right: 120px;
+  float: right;
+  font-family: IBM Plex Sans;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
