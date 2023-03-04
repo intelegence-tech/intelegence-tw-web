@@ -1,484 +1,564 @@
 body {
-  /* default font */
   font-family: Noto Sans CJK TC;
   font-size: 14px;
   font-weight: 500;
-  line-height: 25px;
   letter-spacing: 0.08em;
-  text-align: left;
+  line-height: 25px;
   margin: 0;
+  text-align: left;
+  
+  /* default font */
 }
 
 br.break {
   clear: both;
 }
+
 div.dev-anchor {
+  background: rgba(255, 0, 0, 0.5);
   display: none;
-  width: 100px;
   height: 100px;
-  background: rgba(255,0,0,0.5);
+  width: 100px;
 }
 
 div.header {
-  width: 100vw;
-  max-width:100%;
-  height: 75px;
   background: #005D7B;
+  height: 75px;
+  max-width: 100%;
   position: fixed;
+  width: 100vw;
   z-index: 9000;
 }
 
 
 div.header-col1 {
-  width: 270px;
-  height: 75px;
-  float: left;
   background-image: url(../svg/header-col1.svg);
-  background-size: 270px 75px;
   background-position: center center;
+  background-size: 270px 75px;
+  float: left;
+  height: 75px;
+  width: min(270px, 55vw);
 }
 
 img.logo {
-  padding-top: 14px;
   padding-left: 60px;
+  padding-top: 14px;
 }
 
 div.header-col2 {
-  width: calc(100vw - 560px);
-  height: 75px;
   float: left;
+  height: 75px;
+  overflow: hidden;
   text-align: center;
+  width: calc(100vw - 560px);
 }
+
 div.header a.nav {
-  margin:0;
+  color: #FFFFFF;
   font-size: 18px;
   line-height: 72px;
-  color: #FFFFFF;
-  text-decoration: none;
+  margin-bottom: 0px;
+  margin-left: 0px;
   margin-right: 45px;
+  margin-top: 0px;
+  text-decoration: none;
 }
+
 div.header-col2 a.nav:last-of-type {
   margin-right: 0px;
 }
+
 div.header-col3 {
-  width: 180px;
-  height: 75px;
+  color: #FFFFFF;
   float: right;
   font-size: 18px;
+  height: 75px;
   line-height: 72px;
-  color: #FFFFFF;
-  padding-left: 90px;
+  padding-left: min(90px, 2vw);
+  width: 180px;
 }
+
 div.header-col3 img.icon {
   vertical-align: text-top;
 }
 
 div.main {
-  width: 100vw;
-  max-width:100%;
-  height: 50vw;
   background-image: url(../image/main-1.jpg);
   background-size: cover;
+  height: 50vw;
+  max-width: 100%;
+  min-height: 600px;
+  width: 100vw;
 }
+
 div.main div.main-title {
-  height: 150px;
+  height: 200px;
+  left: 120px;
   position: absolute;
   top: 25%;
-  left: 120px;
 }
+
 div.main-title img {
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
+
 div.main h1 {
+  color: #FFFFFF;
   font-family: Noto Sans CJK TC;
   font-size: 48px;
   font-weight: 700;
-  line-height: 70px;
   letter-spacing: 0.08em;
-  text-align: left;
-  color: #FFFFFF;
+  line-height: 70px;
   margin: 0px;
+  text-align: left;
 }
+
 div.profession {
+  background-image: url(../image/deco-top-service.png);
+  background-position: 0 max(400px, 40vw);
+  background-repeat: no-repeat;
+  background-size: calc(100vw - 60px) 57px;
+  color: #FFFFFF;
   margin-left: 30px;
   margin-right: 30px;
-  padding-top: 40vw;
-  background-image: url(../image/deco-top-service.png);
-  background-size: calc(100vw - 60px) 57px;
-  background-position: 0 40vw;
-  background-repeat: no-repeat;
-  color: #FFFFFF;
+  padding-top: max(400px, 40vw);
 }
+
 div.profession h2 {
-  margin-left: 75px;
+  background-color: #00374B;
+  display: inline-block;
   font-family: Noto Sans CJK TC;
   font-size: 18px;
   font-weight: 500;
-  line-height: 24px;
   letter-spacing: 0.08em;
+  line-height: 24px;
+  margin-bottom: 0px;
+  margin: 0px;
+  padding: 12px clamp(12px, 5vw, 87px);
   text-align: left;
 }
+
 div.profession div.grid {
-  position: relative;
-  z-index: 100;
-  background-color: #00374B; 
+  background-color: #00374B;
   display: flex;
-  padding-top: 36px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 160px;
   padding-left: 80px;
   padding-right: 80px;
-  height: 160px;
-  justify-content: space-between;
+  padding-top: 36px;
+  position: relative;
+  z-index: 100;
 }
+
 div.profession div.grid div.col {
   max-width: 270px;
   padding-right: 20px;
 }
+
 div.profession div.grid div.col img {
   display: block;
   float: left;
-  padding-right: 15px;
   padding-bottom: 40px;
+  padding-right: 15px;
 }
+
 div.profession span.highlight {
-  font-size: 12px;
   color: #E0BA8B;
+  font-size: 12px;
 }
+
 div.content div.company {
-  margin-top: -30px;
   background-image: url(../image/bg-1.jpg);
   background-size: 100% 100%;
+  margin-top: clamp(-30px, calc(980px - 105vw), 200px);
   padding-bottom: 180px;
 }
+
 div.intro {
   padding-top: 100px;
 }
+
 div.section h2 {
-  padding-top: 60px;
-  padding-left: 120px;
+  color: #00374B;
   font-family: Noto Sans CJK TC;
   font-size: 32px;
   font-weight: 500;
-  line-height: 32px;
   letter-spacing: 0.08em;
+  line-height: 32px;
+  padding-left: 120px;
+  padding-top: 60px;
   text-align: left;
-  color: #00374B;
 }
+
 div.section h2 img {
   padding-left: 18px;
 }
+
 div.text {
-  margin-top: 30px;
-  margin-left: 120px;
-  padding-bottom: 36px;
-  width: calc(100vw - 260px);
   background: #FFFFFF;
+  margin-left: min(120px, 4vw);
+  margin-top: 30px;
+  padding-bottom: 36px;
+  width: max(90vw, calc(100vw - 260px));
 }
+
 div.text div.text-header {
   text-align: right;
 }
+
 div.text h3 {
-  margin-top: 36px;
-  margin-left: 110px;
+  color: #00374B;
   font-family: Noto Sans CJK TC;
   font-size: 24px;
   font-weight: 500;
-  line-height: 24px;
   letter-spacing: 0.08em;
+  line-height: 24px;
+  margin-left: min(120px, 4vw);
+  margin-top: 36px;
   text-align: left;
-  color: #00374B;
 }
+
 div.text p {
-  margin: 30px 110px;
+  color: #00374B;
   font-family: Noto Sans CJK TC;
   font-size: 18px;
   font-weight: 400;
-  line-height: 34px;
   letter-spacing: 0.08em;
-  text-align: left;
-  color: #00374B;
+  line-height: 34px;
+  margin-bottom: 30px;
+  margin-left: min(120px, 4vw);
+  margin-right: min(120px, 4vw);
+  margin-top: 30px;
   padding-bottom: 36px;
+  text-align: left;
 }
+
 div.jobs {
   padding-bottom: 180px;
 }
+
 div.jobs-cards {
   display: flex;
   justify-content: flex-start;
-  margin-left: 110px;
-  margin-right: 110px;
+  margin-left: min(120px, 4vw);
+  margin-right: min(120px, 4vw);
 }
 
 div.card {
   background: #FFFFFF;
-  height: 700px;  
-  width: 390px;
   margin-right: 30px;
+  min-height: 700px;
+  width: min(390px, 90vw);
 }
+
 div.card-header {
-  height: 220px;
-  text-align: center;
   background: #005D7B;
+  height: 220px;
   margin: 0;
+  text-align: center;
 }
+
 div.card-header-title {
-  position: relative;
-  margin: auto;
-  top: calc(50% - 40px);
-  height: 80px;
-  width: 280px;
+  color: #FFFFFF;
   font-family: Noto Sans CJK TC;
   font-size: 24px;
   font-weight: 700;
-  line-height: 32px;
+  height: 80px;
   letter-spacing: 0.08em;
+  line-height: 32px;
+  margin: auto;
+  position: relative;
   text-align: center;
-  color: #FFFFFF;
+  top: calc(50% - 40px);
+  width: min(280px, 88vw);
 }
+
 div.card-content {
-  background-repeat: no-repeat;
   background-position: 0 0;
-  padding-top:20px;
-  padding-left:20px;
-  padding-right:20px;
-  padding-bottom: 80px;
+  background-repeat: no-repeat;
   color: #00374B;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
 }
+
 div.card-content hr {
   border: 0.5px solid #00374B;
 }
+
 div.job1 div.card-header {
   background-image: url(../image/job1.png);
 }
+
 div.job1 div.card-content {
   background-image: url(../svg/deco-line1.svg);
 }
+
 div.job2 div.card-header {
   background-image: url(../image/job2.png);
 }
+
 div.job2 div.card-content {
   background-image: url(../svg/deco-line2.svg);
 }
+
 div.job3 div.card-header {
   background-image: url(../image/job3.png);
 }
+
 div.job3 div.card-content {
   background-image: url(../svg/deco-line1.svg);
 }
-div.jobs div.info  {
-  width: 591px;
-  height: 326px;
-  float: left;
-  background-color: #FFFFFF;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  margin-top: 86px;
-  margin-bottom: 20px;
-  box-shadow: 0px -6px 40px rgba(0, 0, 0, 0.2);
+
+div.jobs-info {
+  margin-left: min(120px, 4vw);
+  margin-right: min(120px, 4vw);
 }
+
+div.jobs div.info {
+  background-color: #FFFFFF;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  box-shadow: 0px -6px 40px rgba(0, 0, 0, 0.2);
+  float: left;
+  height: 326px;
+  margin-bottom: 20px;
+  margin-left: 18px;
+  margin-right: 0px;
+  margin-top: 86px;
+  width: min(591px, 95vw);
+}
+
+div.jobs div.info:first-of-type {
+  margin-left: 0px;
+}
+
 div.jobs div.info h2 {
-  padding: 0;
-  margin-top: 45px;
-  margin-left: 45px;
-  margin-bottom: 30px;
+  color: #00374B;
   font-family: Noto Sans CJK TC;
   font-size: 21px;
   font-weight: 500;
-  line-height: 32px;
   letter-spacing: 0.08em;
+  line-height: 32px;
+  margin-bottom: 30px;
+  margin-left: 45px;
+  margin-top: 45px;
+  padding: 0;
   text-align: left;
-  color: #00374B;
 }
+
 div.jobs div.info h2 img {
   vertical-align: middle;
 }
+
 div.jobs div.info ul {
-  margin-left: 30px;
-  font-family: Noto Sans CJK TC;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 35px;
-  letter-spacing: 0.08em;
-  text-align: left;
   color: #00374B;
+  font-family: Noto Sans CJK TC;
+  font-size: min(18px, 3vw);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 35px;
+  margin-left: 30px;
+  text-align: left;
 }
+
 div.jobs div.why-intelegence {
   background-image: url(../svg/deco-line3.svg);
-  margin-left: 110px;
-  margin-right: 8px;
 }
+
 div.jobs div.hr-contact {
   background-image: url(../svg/deco-line4.svg);
-  margin-left: 8px;
-  margin-right: 110px;
 }
+
 div.news {
   background-color: #FFFFFF;
 }
+
 div.news div.more-news {
-  width: 100%;
+  color: #00374B;
   font-family: Noto Sans CJK TC;
   font-size: 18px;
   font-weight: 500;
-  line-height: 20px;
   letter-spacing: 0.08em;
-  text-align: center;
-  color: #00374B;
+  line-height: 20px;
   margin-bottom: 120px;
+  text-align: center;
+  width: 100%;
 }
+
 div.contact {
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-image: url(../image/bg-contactus.jpg);
-  background-size: calc(100vw - 220px) 318px;
   background-color: #FFFFFF;
-  margin-left: 110px;
-  margin-right: 110px;
+  background-image: url(../image/bg-contactus.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: max(92vw, calc(100vw - 220px)) 318px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  margin-left: min(120px, 4vw);
+  margin-right: min(120px, 4vw);
 }
+
 div.contact div.text-header {
   text-align: right;
 }
+
 div.contact h2 {
+  color: #FFFFFF;
   font-family: Noto Sans CJK TC;
   font-size: 32px;
   font-weight: 500;
-  line-height: 32px;
   letter-spacing: 0.08em;
-  text-align: left;
-  color: #FFFFFF;
+  line-height: 32px;
+  margin-bottom: 172px;
   margin-left: 90px;
   margin-top: 90px;
-  margin-bottom: 172px;
-}
-div.contact form {
-  margin-left: 90px;
-  margin-right: 90px;
-  margin-bottom: 36px;
-  font-family: Noto Sans CJK TC;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 32px;
-  letter-spacing: 0.08em;
   text-align: left;
-  color: #00374B;
 }
+
+div.contact form {
+  color: #00374B;
+  font-family: Noto Sans CJK TC;
+  font-size: clamp(10px, 3vw, 18px);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 32px;
+  margin-bottom: 36px;
+  margin-left: min(90px, 2vw);
+  margin-right: min(90px, 2vw);
+  text-align: left;
+}
+
 div.contact form .space {
   display: inline-block;
-  margin-left: calc(100% - 680px);
+  margin-left: max(0px, calc(100% - 680px));
 }
+
 div.contact form .required:after {
   color: #E75E5E;
-  margin-left: 8px;
+  content: "*";
   font-size: 24px;
-  content: "*"
+  margin-left: 8px;
 }
+
 div.contact form label {
   font-family: Noto Sans CJK TC;
   font-size: 18px;
   font-weight: 500;
+  letter-spacing: 0.08em;
   line-height: 24px;
-  letter-: 0.08em;
   text-align: left;
 }
+
 div.contact input {
-  margin-top: 15px;
-  margin-bottom: 36px;
   background: #F4F4F4;
   border: 1px solid #D8D8D8;
-  width: 100%;
   height: 60px;
+  margin-bottom: 36px;
+  margin-top: 15px;
+  width: 100%;
 }
+
 div.contact input::placeholder,
-div.contact textarea::placeholder
- {
-  padding-left: 30px;
+div.contact textarea::placeholder {
+  color: #BBBBBB;
   font-family: Noto Sans CJK TC;
   font-size: 18px;
   font-weight: 400;
-  line-height: 32px;
   letter-spacing: 0.08em;
+  line-height: 32px;
+  padding-left: 30px;
   text-align: left;
-  color: #BBBBBB;
 }
+
 div.form-input1 {
-  margin-top: 36px;
+  column-gap: 60px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 60px;
-}
-div.form-input2 {
   margin-top: 36px;
-  margin-bottom: 60px;
+}
+
+div.form-input2 {
   display: grid;
   grid-template-columns: 160px 1fr;
+  margin-bottom: 60px;
+  margin-top: 36px;
 }
+
 div.form-input2 label {
   padding-top: 20px;
 }
+
 div.form-input2 textarea {
-  width: 100%;
-  height: 240px;
   background: #F4F4F4;
   border: 1px solid #D8D8D8;
+  height: 240px;
+  width: 100%;
 }
 
 div.contact form button {
-  margin-bottom: 36px;
-  width: 100%;
-  height: 60px;
+  background-color: #005D7B;
+  color: #FFFFFF;
   font-family: Noto Sans CJK TC;
   font-size: 18px;
   font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.08em;
-  text-align: center;
-  color: #FFFFFF;
-  background-color: #005D7B;
-}
-div.footer-top {
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-image: url(../image/deco-footer-top.png);
-  background-size: 100vw 60px;
-  width: 100vw;
-  max-width:100%;
   height: 60px;
+  letter-spacing: 0.08em;
+  line-height: 24px;
+  margin-bottom: 36px;
+  text-align: center;
+  width: 100%;
 }
-div.footer{
-  background-color: #00374B;
+
+div.footer-top {
+  background-image: url(../image/deco-footer-top.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100vw 60px;
+  height: 60px;
+  max-width: 100%;
   width: 100vw;
-  max-width:100%;
-  height: 180px;
-  color: #FFFFFF;
 }
-div.footer p{
+
+div.footer {
+  background-color: #00374B;
+  color: #FFFFFF;
+  height: 180px;
+  max-width: 100%;
+  width: 100vw;
+}
+
+div.footer p {
   margin: 0px;
 }
-div.footer-col1{
+
+div.footer-col1 {
   float: left;
   margin-top: 45px;
 }
-div.footer-col2{
-  margin-top: 60px;
-  margin-left: 60px;
+
+div.footer-col2 {
   float: left;
   font-family: IBM Plex Sans;
   font-size: 12px;
   font-style: italic;
   font-weight: 400;
-  line-height: 24px;
   letter-spacing: 0.04em;
+  line-height: 24px;
+  margin-left: 60px;
+  margin-top: 60px;
   text-align: left;
 }
-div.footer-col3{
-  margin-top: 108px;
-  margin-right: 120px;
+
+div.footer-col3 {
   float: right;
   font-family: IBM Plex Sans;
   font-size: 14px;
   font-style: italic;
   font-weight: 500;
-  line-height: 24px;
   letter-spacing: 0.04em;
+  line-height: 24px;
+  margin-right: 120px;
+  margin-top: 108px;
   text-align: left;
 }
