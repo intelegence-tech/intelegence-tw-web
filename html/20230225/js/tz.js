@@ -2,6 +2,10 @@ function init() {
 
 }
 
+function show_article(id) {
+    alert("文章" + id);
+}
+
 function send_contactus_form() {
     var emailValidRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
@@ -34,8 +38,7 @@ function send_contactus_form() {
 
     const request = new XMLHttpRequest();
     request.onreadystatechange = () => { // Call a function when the state changes.
-        if (request.readyState === XMLHttpRequest.DONE)
-        {
+        if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
                 alert("已收到您的來訊，我們會儘速和您聯繫，謝謝！");
             } else {

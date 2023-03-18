@@ -91,7 +91,7 @@ div.main {
   width: 100vw;
 }
 
-@keyframes main-bg {
+@keyframes main-bg {   
    0%,100%  {
     background-image: url(../image/main-1.jpg);
   }
@@ -102,7 +102,7 @@ div.main {
    66% {
     background-image: url(../image/main-3.jpg);
   }
-}
+     }
 
 div.main div.main-title {
   height: 200px;
@@ -195,7 +195,7 @@ div.intro {
 div.section h2 {
   color: #00374B;
   font-family: Noto Sans CJK TC;
-  font-size: 32px;
+  font-size: clamp(24px, 5vw, 32px);
   font-weight: 500;
   letter-spacing: 0.08em;
   line-height: 32px;
@@ -351,7 +351,7 @@ div.jobs div.info:first-of-type {
 div.jobs div.info h2 {
   color: #00374B;
   font-family: Noto Sans CJK TC;
-  font-size: 21px;
+  font-size: clamp(16px, 3.5vw, 21px);
   font-weight: 500;
   letter-spacing: 0.08em;
   line-height: 32px;
@@ -369,7 +369,7 @@ div.jobs div.info h2 img {
 div.jobs div.info ul {
   color: #00374B;
   font-family: Noto Sans CJK TC;
-  font-size: min(18px, 3vw);
+  font-size: clamp(12px, 3vw, 18px);
   font-weight: 400;
   letter-spacing: 0.08em;
   line-height: 35px;
@@ -389,16 +389,70 @@ div.news {
   background-color: #FFFFFF;
 }
 
+div.news div.news-list {
+  margin-left: min(144px, 14vw);
+  margin-right: min(144px, 14vw);
+}
+
+@media only screen and (min-device-width: 840px) and (min-width: 840px) {  
+  div.news div.news-list {
+    margin-left: 370px;
+    margin-right: 120px;
+    position: relative;
+    top: -80px;
+  }
+   }
+
+div.news div.news-row {
+  border-bottom: 1px solid #D0D0D0;
+  color: #005D7B;
+  cursor: pointer;
+  display: grid;
+  font-family: Noto Sans CJK TC;
+  font-size: clamp(14px, 3vw, 18px);
+  font-style: normal;
+  font-weight: 500;
+  gap: min(5vw, 48px);
+  grid-template-columns: 108px 90px auto;
+  height: 32px;
+  letter-spacing: 0.08em;
+  line-height: 32px;
+  padding-bottom: 24px;
+  padding-top: 24px;
+  width:100%;
+}
+
+div.news-row div.news-category {
+  background-color: #606060;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+div.news-row div.news-category.selected {
+  background-color: #D2A369;
+}
+
+div.news-row div.news-category.share {
+  background-color: #028EA5;
+}
+
+div.news-row div.news-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 div.news div.more-news {
   color: #00374B;
   font-family: Noto Sans CJK TC;
-  font-size: 18px;
+  font-size: clamp(14px, 3vw, 18px);
   font-weight: 500;
   letter-spacing: 0.08em;
   line-height: 20px;
   margin-bottom: 120px;
-  text-align: center;
-  width: 100%;
+  margin-left: min(120px, 4vw);
+  margin-right: min(120px, 4vw);
+  text-align: right;
 }
 
 div.contact {
@@ -419,7 +473,7 @@ div.contact div.text-header {
 div.contact h2 {
   color: #FFFFFF;
   font-family: Noto Sans CJK TC;
-  font-size: 32px;
+  font-size: clamp(24px, 6vw, 32px);
   font-weight: 500;
   letter-spacing: 0.08em;
   line-height: 32px;
@@ -432,7 +486,7 @@ div.contact h2 {
 div.contact form {
   color: #00374B;
   font-family: Noto Sans CJK TC;
-  font-size: clamp(10px, 3vw, 18px);
+  font-size: clamp(12px, 3vw, 18px);
   font-weight: 400;
   letter-spacing: 0.08em;
   line-height: 32px;
@@ -456,7 +510,7 @@ div.contact form .required:after {
 
 div.contact form label {
   font-family: Noto Sans CJK TC;
-  font-size: clamp(10px, 3vw, 18px);
+  font-size: clamp(12px, 3vw, 18px);
   font-weight: 500;
   letter-spacing: 0.08em;
   line-height: 24px;
@@ -467,7 +521,7 @@ div.contact input {
   background: #F4F4F4;
   border: 1px solid #D8D8D8;
   font-family: Noto Sans CJK TC;
-  font-size: clamp(10px, 3vw, 18px);
+  font-size: clamp(12px, 3vw, 18px);
   height: 60px;
   margin-bottom: 36px;
   margin-top: 15px;
@@ -484,7 +538,7 @@ div.contact input::placeholder,
 div.contact textarea::placeholder {
   color: #BBBBBB;
   font-family: Noto Sans CJK TC;
-  font-size: clamp(10px, 3vw, 18px);
+  font-size: clamp(12px, 3vw, 18px);
   font-weight: 400;
   letter-spacing: 0.08em;
   line-height: 32px;
@@ -513,11 +567,11 @@ div.form-input2 label {
 div.form-input2 textarea {
   background: #F4F4F4;
   border: 1px solid #D8D8D8;
-  height: 240px;
-  width: 100%;
   font-family: Noto Sans CJK TC;
-  font-size: 16px;
+  font-size: clamp(12px, 3vw, 18px);
+  height: 240px;
   padding: 10px;
+  width: 100%;
 }
 
 div.contact form button {
