@@ -5,9 +5,10 @@
   <meta charset="UTF-8" />
   <title>騰茲電通 - Unveil Intelligence of RF Devices</title>
   <link rel="stylesheet" href="css/tz.css">
+  <script src="js/tz.js"></script>
 </head>
 
-<body>
+<body onload="init()">
   <div class="header">
     <div class="header-col1">
       <img class="logo" src="svg/logo.svg" />
@@ -183,28 +184,28 @@
         <div class="form-input1">
           <div>
             <label class="required">公司名稱</label><br />
-            <input name="company" type="text" placeholder="請輸入公司名稱" />
+            <input id="form-input-company" name="company" type="text" placeholder="請輸入公司名稱" />
           </div>
           <div>
             <label class="required">聯絡人姓名</label><br />
-            <input name="name" type="text" placeholder="請輸入您的姓名" />
+            <input id="form-input-name" name="name" type="text" placeholder="請輸入您的姓名" />
           </div>
           <div>
             <label class="required">電子信箱</label><br />
-            <input name="email" type="email" placeholder="範例＠example.com" />
+            <input id="form-input-email" name="email" type="email" placeholder="範例＠example.com" />
           </div>
           <div>
             <label class="required">聯絡人電話</label><br />
-            <input name="tel" type="tel" placeholder="0912xxxxxx" />
+            <input id="form-input-tel" name="tel" type="tel" placeholder="0912xxxxxx" />
           </div>
         </div>
         <div class="form-input2">
           <label class="required">諮詢項目</label>
-          <input name="subject" type="text" placeholder="請輸入主旨" />
+          <input id="form-input-subject" name="subject" type="text" placeholder="請輸入主旨" />
           <label class="required">諮詢內容</label>
-          <textarea name="content" placeholder="再請您詳細描述您的問題或需求"></textarea>
+          <textarea id="form-input-content" name="content" placeholder="再請您詳細描述您的問題或需求"></textarea>
         </div>
-        <button id="send" type="button">確認送出</button>
+        <button id="send" type="button" onclick="send_contactus_form()">確認送出</button>
       </form>
     </div>
   </div>
