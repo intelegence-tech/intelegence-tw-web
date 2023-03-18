@@ -456,7 +456,7 @@ div.contact form .required:after {
 
 div.contact form label {
   font-family: Noto Sans CJK TC;
-  font-size: 18px;
+  font-size: clamp(10px, 3vw, 18px);
   font-weight: 500;
   letter-spacing: 0.08em;
   line-height: 24px;
@@ -466,9 +466,12 @@ div.contact form label {
 div.contact input {
   background: #F4F4F4;
   border: 1px solid #D8D8D8;
+  font-family: Noto Sans CJK TC;
+  font-size: clamp(10px, 3vw, 18px);
   height: 60px;
   margin-bottom: 36px;
   margin-top: 15px;
+  padding-left: 10px;
   width: 100%;
 }
 
@@ -481,7 +484,7 @@ div.contact input::placeholder,
 div.contact textarea::placeholder {
   color: #BBBBBB;
   font-family: Noto Sans CJK TC;
-  font-size: 18px;
+  font-size: clamp(10px, 3vw, 18px);
   font-weight: 400;
   letter-spacing: 0.08em;
   line-height: 32px;
@@ -512,6 +515,9 @@ div.form-input2 textarea {
   border: 1px solid #D8D8D8;
   height: 240px;
   width: 100%;
+  font-family: Noto Sans CJK TC;
+  font-size: 16px;
+  padding: 10px;
 }
 
 div.contact form button {
