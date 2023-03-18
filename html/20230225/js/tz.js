@@ -34,13 +34,15 @@ function send_contactus_form() {
 
     const request = new XMLHttpRequest();
     request.onreadystatechange = () => { // Call a function when the state changes.
-        if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
-            alert("已收到您的來訊，我們會儘速和您聯繫，謝謝！");
+        if (request.readyState === XMLHttpRequest.DONE)
+        {
+            if (request.status === 200) {
+                alert("已收到您的來訊，我們會儘速和您聯繫，謝謝！");
+            } else {
+                alert("很抱歉，系統出現問題，如果您有需要聯繫的事宜，請先透過電話或Email和我們連絡，謝謝！");
+            }
         }
-        else {
-            alert("很抱歉，系統出現問題，如果您有需要聯繫的事宜，請先透過電話或Email和我們連絡，謝謝！");
-        }
-      }
+    }
     request.open("POST", "/save");
     request.send(data);
 }
