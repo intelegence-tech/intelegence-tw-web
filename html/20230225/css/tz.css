@@ -6,7 +6,7 @@ body {
   line-height: 25px;
   margin: 0;
   text-align: left;
-
+  
   /* default font */
 }
 
@@ -20,6 +20,7 @@ div.dev-anchor {
   height: 100px;
   width: 100px;
 }
+
 
 div.header {
   background: #005D7B;
@@ -92,7 +93,7 @@ div.main {
 }
 
 @keyframes main-bg {
-
+  
   0%,
   100% {
     background-image: url(../image/main-1.jpg);
@@ -398,6 +399,7 @@ div.news div.news-list {
 }
 
 @media only screen and (min-device-width: 840px) and (min-width: 840px) {
+  
   div.news div.news-list {
     margin-left: 370px;
     margin-right: 120px;
@@ -598,49 +600,50 @@ div.contact form button:hover {
 div.article {
   display: none;
   grid-template-columns: 60vw auto;
+  padding-bottom: 32px;
   padding-left: min(120px, 4vw);
   padding-right: min(120px, 4vw);
   padding-top: 140px;
-  padding-bottom: 32px;
 }
 
 div.article div.article-side {
-  margin-left: 40px;
   background-image: url('../image/article/article-deco.svg');
-  background-size: contain;
   background-position: 0 0;
   background-repeat: no-repeat;
-  padding-top: 64px;
+  background-size: contain;
+  margin-left: 40px;
+  padding-bottom: 64px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 64px;
+  padding-top: 64px;
 }
 
 div.article div.article-side h3 {
+  color: #005D7B;
   font-family: 'Noto Sans CJK TC';
+  font-size: 24px;
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 32px;
   letter-spacing: 0.08em;
-  color: #005D7B;
+  line-height: 32px;
 }
 
 div.article div.article-side div.article-others-row {
   background-image: url(../svg/right-arrow.svg);
-  background-size: 16px 16px;
   background-position: center right;
   background-repeat: no-repeat;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  background-size: 16px 16px;
+  border-bottom: 1px solid #D0D0D0;
+  color: #00374B;
+  cursor: pointer;
   font-family: 'Noto Sans CJK TC';
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  letter-spacing: 0.08em;
   line-height: 32px;
-  letter-spacing: 0.08em;  
-  color: #00374B;
-  border-bottom: 1px solid #D0D0D0;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 
@@ -649,45 +652,45 @@ div.article img {
 }
 
 div.article #article_title {
+  color: #00374B;
   font-family: 'Noto Sans CJK TC';
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0.08em;
   line-height: 32px;
-  color: #00374B;
 }
 
 div.article #article_date {
+  color: #9CB3BC;
   font-family: 'Noto Sans CJK TC';
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  letter-spacing: 0.08em;
   line-height: 25px;
-  letter-spacing: 0.08em;  
-  color: #9CB3BC;
 }
 
 div.article #article_author {
-  margin-left: 15px;
+  color: #005D7B;
   font-family: 'Noto Sans CJK TC';
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 25px;
   letter-spacing: 0.08em;
-  color: #005D7B;
+  line-height: 25px;
+  margin-left: 15px;
 }
 
 div.article #article_content p {
-  margin-top: 30px;
+  color: #00374B;
   font-family: 'Noto Sans CJK TC';
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 35px;
   letter-spacing: 0.08em;
-  color: #00374B;
+  line-height: 35px;
+  margin-top: 30px;
 }
 
 div.footer-top {

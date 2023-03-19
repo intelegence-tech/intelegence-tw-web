@@ -44,7 +44,12 @@ function load_news() {
 
 }
 
-function show_article(id) {
+function show_article(id) {    
+    document.getElementById("article_img").addEventListener("load", function() {
+        console.log("article_img onload");
+        document.getElementById("loading").style.display="none";
+    }, false);
+    document.getElementById("loading").style.display="block";
     document.getElementById("article_img").src = news[id].IMG_URL;
     document.getElementById("article_title").innerText = news[id].TITLE;
     document.getElementById("article_date").innerText = news[id].DATE;
@@ -92,14 +97,18 @@ function send_contactus_form() {
 
     data.set('ts', new Date().toISOString());
 
+    document.getElementById("loading").style.display="block";
+
     const request = new XMLHttpRequest();
     request.onreadystatechange = () => { // Call a function when the state changes.
         if (request.readyState === XMLHttpRequest.DONE) {
+            document.getElementById("loading").style.display="none";
             if (request.status === 200) {
                 alert("已收到您的來訊，我們會儘速和您聯繫，謝謝！");
             } else {
                 alert("很抱歉，系統出現問題，如果您有需要聯繫的事宜，請先透過電話或Email和我們連絡，謝謝！");
             }
+            window.scrollTo({ top: 0, behavior: 'auto' });
         }
     }
     request.open("POST", "/api/save");

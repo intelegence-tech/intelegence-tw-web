@@ -9,10 +9,16 @@
   <link rel="preload" href="image/main-3.jpg" as="image">
   <link rel="preload" href="image/main-4.jpg" as="image">
   <link rel="stylesheet" href="css/tz.css">
+  <link rel="stylesheet" href="css/spinning.css">
   <script src="js/tz.js"></script>
 </head>
 
 <body onload="init()">
+  <div id="loading" class="overlay" onclick="event.preventDefault(); return false;">
+    <div class="overlay__inner">
+        <div class="overlay__content"><span class="spinner"></span></div>
+    </div>
+</div>
   <div class="header">
     <div class="header-col1">
       <a class="nav" href="#">
