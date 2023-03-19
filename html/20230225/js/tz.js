@@ -46,6 +46,6 @@ function send_contactus_form() {
             }
         }
     }
-    request.open("POST", "/save");
+    request.open("POST", "/api/save");
     request.send(data);
 }
