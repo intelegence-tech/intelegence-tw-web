@@ -46,7 +46,7 @@ def news():
   fetch = True
   if (len(cache_news) > 0):
     data = cache_news[0]    
-    if (data['time'] > now - 86400):
+    if (data['time'] > now - 3600):
        fetch = False
 
   if fetch:
