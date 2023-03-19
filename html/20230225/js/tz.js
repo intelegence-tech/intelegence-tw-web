@@ -1,9 +1,65 @@
+var news;
+
 function init() {
+    load_news();
+    Array.from(document.getElementsByTagName("a")).forEach(e => {
+        e.addEventListener("click", function () {
+            document.getElementById("article").style.display = "none";
+            document.getElementById("main").style.display = "block";
+            document.getElementById("content").style.display = "block";
+        }, false);
+    });
+//    setTimeout(x => show_article(0), 1000)
+
+}
+
+function load_news() {
+    const request = new XMLHttpRequest();
+    request.onreadystatechange = () => { // Call a function when the state changes.
+        if (request.readyState === XMLHttpRequest.DONE) {
+            data = JSON.parse(request.response);
+            news = data.news;
+            news_html = '';
+            article_othres_html = '';
+            news.forEach((row, idx) => {
+                news_html += `<div class="news-row" onclick="show_article(${idx});">
+                    <div class="news-date">${row.DATE.replaceAll('/', '.')}</div>
+                    <div class="news-category ${row.CATEGORY}"> ${row.CATEGORY_TEXT}</div>
+                    <div class="news-title"> ${row.TITLE}</div>
+                  </div>\n`;
+                article_othres_html += `<div id="article-${idx}" class="article-others-row" onclick="show_article(${idx});">
+                    <div class="news-title"> ${row.TITLE}</div>
+                    </div>\n`;
+
+            });
+            div_news_list = document.getElementById('news-list');
+            div_news_list.innerHTML = news_html;
+            div_article_others = document.getElementById('article-others');
+            div_article_others.innerHTML = article_othres_html;
+
+        }
+    }
+    request.open("GET", "/api/news");
+    request.send();
 
 }
 
 function show_article(id) {
-    alert("文章" + id);
+    document.getElementById("article_img").src = news[id].IMG_URL;
+    document.getElementById("article_title").innerText = news[id].TITLE;
+    document.getElementById("article_date").innerText = news[id].DATE;
+    document.getElementById("article_author").innerText = news[id].AUTHOR?.trim() || '';
+    document.getElementById("article_content").innerHTML = `<p>${news[id].CONTENT.replaceAll("\n", "</p><p>")}</p>`;
+    document.getElementById("article").style.display = "grid";
+
+    Array.from(document.getElementsByClassName("article-others-row")).forEach(r => {
+        if (r.id == `article-${id}`) r.style.display = "none";
+        else r.style.display = "block";
+    });
+
+    document.getElementById("main").style.display = "none";
+    document.getElementById("content").style.display = "none";
+    window.scrollTo({ top: 0, behavior: 'auto' });
 }
 
 function send_contactus_form() {

@@ -11,7 +11,9 @@
 <body onload="init()">
   <div class="header">
     <div class="header-col1">
-      <img class="logo" src="svg/logo.svg" />
+      <a class="nav" href="#">
+        <img class="logo" src="svg/logo.svg" />
+      </a>
     </div>
     <div class="header-col2">
       <a class="nav" href="#profession">服務項目</a>
@@ -23,7 +25,7 @@
       <a class="nav" href="#contact"><img class="icon" src="svg/icon-email.svg" /> 聯絡我們</a>
     </div>
   </div>
-  <div class="main">
+  <div id="main" class="main">
     <div class="main-title">
       <img src="svg/intelegence.svg" />
       <h1>結合智能與遠見</h1>
@@ -62,13 +64,13 @@
       </div>
     </div>
   </div>
-  <div class="content">
+  <div id="content" class="content">
     <div class="company">
       <div class="section intro">
         <a name="intro"></a>
         <h2>公司介紹<img src="svg/title-deco.svg"></h2>
         <div class="text">
-          <div class="text-header"><img src="svg/deco-contactus.svg" /></div>
+          <div class="text-header"><img src="svg/about-deco.svg" /></div>
           <h3>關於騰茲電通</h3>
           <p>
             騰茲電通專精於軟體系統整合，擴展資訊設備使用成效，優化應用效能。除了跨設備的資料整合分析技術外，我們也將軟體技術應用在工作流程優化，協助組織的流程與準則管理，專案規劃及現場協力工作，進而回應工作型態改變的浪潮，幫助組織提升社會創新效率。期待軟體成為組織成長的核心，結合資通訊設備整合與流程管理的專長，用數據洞察趨勢，提升組織創新效能，幫助客戶搶得變動市場的先機。
@@ -169,8 +171,8 @@
     <a name="news"></a>
     <div class="section news">
       <h2>最新消息<img src="svg/title-deco.svg"></h2>
-      <div class="news-list">
-        <div class="news-row" onclick="show_article(1);">
+      <div id="news-list" class="news-list">
+        <!--        <div class="news-row" onclick="show_article(1);">
           <div class="news-date">2023.01.28</div>
           <div class="news-category selected">精選</div>
           <div class="news-title">軟體與魔法</div>
@@ -180,6 +182,7 @@
           <div class="news-category share">文章分享</div>
           <div class="news-title">軟體是一種藝術</div>
         </div>
+-->
       </div>
       <div class="more-news">
         點選展開看更多 <img src="svg/down-arrow.svg" />
@@ -188,7 +191,7 @@
     <br class="break" />
     <a name="contact"></a>
     <div class="contact">
-      <div class="text-header"><img src="svg/about-deco.svg" /></div>
+      <div class="text-header"><img src="svg/deco-contactus.svg" /></div>
       <h2>聯絡我們</h2>
       <form id="contactus-form">
         您可以在下方表格填入諮詢內容，我們將盡快回覆您，謝謝！
@@ -219,6 +222,19 @@
         </div>
         <button id="send" type="button" onclick="send_contactus_form()">確認送出</button>
       </form>
+    </div>
+  </div>
+  <div id="article" class="article">
+    <div class="article-main">
+      <img id="article_img" src="" />
+      <h1 id="article_title"></h1>
+      <h3 id="article_meta"><span id="article_date"></span><span id="article_author"></span></h3>
+      <hr />
+      <div id="article_content"></div>
+    </div>
+    <div class="article-side">
+      <h3>其他閱讀推薦</h3>
+      <div id="article-others" class="article-others"></div>
     </div>
   </div>
   <div class="dev-anchor"></div>
