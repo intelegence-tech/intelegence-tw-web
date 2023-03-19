@@ -92,8 +92,7 @@ div.main {
   width: 100vw;
 }
 
-@keyframes main-bg {
-  
+@keyframes main-bg {  
   0%,
   100% {
     background-image: url(../image/main-1.jpg);
@@ -110,27 +109,41 @@ div.main {
   75% {
     background-image: url(../image/main-4.jpg);
   }
-}
+   }
 
 div.main div.main-title {
+  animation: title-effect 0.5s ease-out;;
   height: 200px;
-  left: 120px;
+  left: min(12vw, 120px);
   position: absolute;
   top: max(15vw, 180px);
+  transform-origin: center left;
+}
+
+@keyframes title-effect {
+  
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }
 
 div.main-title img {
   margin-bottom: 20px;
+  max-width: 72vw;
 }
 
 div.main h1 {
   color: #FFFFFF;
   font-family: Noto Sans CJK TC;
-  font-size: 48px;
+  font-size: min(7vw, 48px);
   font-weight: 700;
   letter-spacing: 0.08em;
   line-height: 70px;
   margin: 0px;
+  max-width: 75vw;
   text-align: left;
 }
 
@@ -173,7 +186,9 @@ div.profession div.grid {
 }
 
 div.profession div.grid div.col {
+  flex: 1 1 0px;
   max-width: 270px;
+  min-width: 270px;
   padding-right: 20px;
 }
 
@@ -398,15 +413,14 @@ div.news div.news-list {
   margin-right: min(144px, 14vw);
 }
 
-@media only screen and (min-device-width: 840px) and (min-width: 840px) {
-  
+@media only screen and (min-device-width: 840px) and (min-width: 840px) {  
   div.news div.news-list {
     margin-left: 370px;
     margin-right: 120px;
     position: relative;
     top: -80px;
   }
-}
+   }
 
 div.news div.news-row {
   border-bottom: 1px solid #D0D0D0;
