@@ -10,6 +10,11 @@ body {
   /* default font */
 }
 
+* {
+  /* disable mobile auto text-size-adjust */
+  text-size-adjust: none;
+}
+
 br.break {
   clear: both;
 }
