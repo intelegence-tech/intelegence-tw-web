@@ -5,12 +5,22 @@ function init() {
     Array.from(document.getElementsByTagName("a")).forEach(e => {
         e.addEventListener("click", function () {
             document.getElementById("article").style.display = "none";
+            if (document.getElementById("menu") && document.getElementById("menu").style.display != "none") {
+                show_menu();
+            }
             document.getElementById("main").style.display = "block";
             document.getElementById("content").style.display = "block";
         }, false);
     });
-//    setTimeout(x => show_article(0), 1000)
+    //    setTimeout(x => show_article(0), 1000)
+}
 
+function show_menu() {
+    var display = document.getElementById("menu").style.display;
+    var new_display = display === "none" ? "block" : "none";
+    var new_icon = display === "none" ? "image/mobile/icon-close.svg" : "image/mobile/icon-mb-menu.svg";
+    document.getElementById("menu").style.display = new_display;
+    document.getElementById("menu_icon").src = new_icon;
 }
 
 function load_news() {
@@ -44,12 +54,12 @@ function load_news() {
 
 }
 
-function show_article(id) {    
-    document.getElementById("article_img").addEventListener("load", function() {
+function show_article(id) {
+    document.getElementById("article_img").addEventListener("load", function () {
         console.log("article_img onload");
-        document.getElementById("loading").style.display="none";
+        document.getElementById("loading").style.display = "none";
     }, false);
-    document.getElementById("loading").style.display="block";
+    document.getElementById("loading").style.display = "block";
     document.getElementById("article_img").src = news[id].IMG_URL;
     document.getElementById("article_title").innerText = news[id].TITLE;
     document.getElementById("article_date").innerText = news[id].DATE;
@@ -70,8 +80,8 @@ function show_article(id) {
 function send_contactus_form() {
     var emailValidRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-    var form = document.getElementsByTagName("FORM");
-    var data = new FormData(form[0]);
+    var form = document.getElementsByTagName("FORM")[0];
+    var data = new FormData(form);
     var valid = true;
     var invalid_message = '';
     for (const [key, value] of data) {
@@ -97,14 +107,15 @@ function send_contactus_form() {
 
     data.set('ts', new Date().toISOString());
 
-    document.getElementById("loading").style.display="block";
+    document.getElementById("loading").style.display = "block";
 
     const request = new XMLHttpRequest();
     request.onreadystatechange = () => { // Call a function when the state changes.
         if (request.readyState === XMLHttpRequest.DONE) {
-            document.getElementById("loading").style.display="none";
+            document.getElementById("loading").style.display = "none";
             if (request.status === 200) {
                 alert("已收到您的來訊，我們會儘速和您聯繫，謝謝！");
+                form.reset();
             } else {
                 alert("很抱歉，系統出現問題，如果您有需要聯繫的事宜，請先透過電話或Email和我們連絡，謝謝！");
             }
